@@ -1,0 +1,39 @@
+目前sku的制作样本分两种：
+
+
+1.完全依赖用户click行为数据
+get_sku_click_samples.py
+
+2.将用户的query数据的term weight融入进来，然后进行加权求和
+get_sku_click_samples_method2.py
+
+
+3.sku的统计特征计算每个term weight分值+行为数据对每个term产生分值，两者相加得到一个分值
+(解决问题：阿迪达斯男鞋   阿迪达斯运动鞋，阿迪达斯球鞋 ，导致运动鞋和球鞋没有分值）
+
+get_sku_click_samples_method3.py
+
+
+
+4.sku的统计特征计算每个term weight分值+行为数据对每个term产生的weight分值，两者相加得到一个分值
+
+get_sku_click_samples_method4.py
+
+3和4待做
+
+5.得到最终的样本
+get_sku_statistics_samples.py
+
+
+
+模型：
+
+1.可学习的机器学习模型+语义模型
+2.语义模型
+
+
+3.语义模型+把类目作为emb传进模型学习
+4.语义模型+把类目作为emb传进模型学习+可学习的机器学习模型
+
+
+3和4待做
